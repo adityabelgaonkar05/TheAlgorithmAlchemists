@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="style.css" rel="stylesheet" />
+  <title>Financial Report</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <div class="">
+    <p>
+    <ul>
+      {% for items in data%}
+      <li>{{items["action"]}}</li>
+      <li>{{items["amount"]}}</li>
+      {% endfor %}
+    </ul>
+    </p>
+  </div>
+  <h1>
+    Impressed with our financial report and want deeper insights? Click below
+    to buy our premium plan!
+  </h1>
+  <button class="submitbtn"><a href="login.html">Buy Premium</a></button>
+</body>
+
+</html>
