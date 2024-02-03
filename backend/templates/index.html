@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="../static/index.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money Mentor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="text-gray-600 body-font">
+      <div
+        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+      >
+        <a
+          class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+            ></path>
+          </svg>
+          <span class="ml-3 text-xl">Money Mentor</span>
+        </a>
+        <nav
+          class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
+        >
+          <a class="mr-5 hover:text-gray-900">Home</a>
+          <a class="mr-5 hover:text-gray-900">About Us</a>
+          <a class="mr-5 hover:text-gray-900">Third Link</a>
+          <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+        </nav>
+        <button
+          class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+        >
+          Button
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-4 h-4 ml-1"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <!-- Hero Section -->
+
+    <div class="carousel">
+      <input
+        type="radio"
+        name="carousel"
+        id="slide-btn-1"
+        class="slide-btn"
+        onclick="setInt();"
+        checked
+      />
+      <input
+        type="radio"
+        name="carousel"
+        id="slide-btn-2"
+        class="slide-btn"
+        onclick="setInt();"
+      />
+      <input
+        type="radio"
+        name="carousel"
+        id="slide-btn-3"
+        class="slide-btn"
+        onclick="setInt();"
+      />
+      <input
+        type="radio"
+        name="carousel"
+        id="slide-btn-4"
+        class="slide-btn"
+        onclick="setInt();"
+      />
+      <input
+        type="radio"
+        name="carousel"
+        id="slide-btn-5"
+        class="slide-btn"
+        onclick="setInt();"
+      />
+      <div class="slide one parallax-effect">
+        <h1>Slide 1</h1>
+        <div class="credit">
+          Made with <span style="color: tomato">❤</span> by
+          <a href="https://www.learningrobo.com/">Learning Robo</a>
+        </div>
+      </div>
+      <div class="slide two parallax-effect">
+        <h1>Slide 2</h1>
+        <div class="credit">
+          Made with <span style="color: tomato">❤</span> by
+          <a href="https://www.learningrobo.com/">Learning Robo</a>
+        </div>
+      </div>
+      <div class="slide three parallax-effect">
+        <h1>Slide 3</h1>
+        <div class="credit">
+          Made with <span style="color: tomato">❤</span> by
+          <a href="https://www.learningrobo.com/">Learning Robo</a>
+        </div>
+      </div>
+      <div class="slide four parallax-effect">
+        <h1>Slide 4</h1>
+        <div class="credit">
+          Made with <span style="color: tomato">❤</span> by
+          <a href="https://www.learningrobo.com/">Learning Robo</a>
+        </div>
+      </div>
+      <div class="slide five parallax-effect">
+        <h1>Slide 5</h1>
+        <div class="credit">
+          Made with <span style="color: tomato">❤</span> by
+          <a href="https://www.learningrobo.com/">Learning Robo</a>
+        </div>
+      </div>
+      <div class="labels">
+        <label for="slide-btn-1"></label>
+        <label for="slide-btn-2"></label>
+        <label for="slide-btn-3"></label>
+        <label for="slide-btn-4"></label>
+        <label for="slide-btn-5"></label>
+      </div>
+    </div>
+    <script type="text/javascript" src="../static/index.js"></script>
+
+    <!-- Form -->
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+    <form method="POST" action="http://127.0.0.1:5000">
+       <div class="form-group">
+                    <label for="name">Salary: </label>
+                    <input type="text" name="salary" id="salary" placeholder="Enter Your Salary">
+                </div>
+                <div class="form-group">
+                    <label for="email">Goal: </label>
+                    <input type="text" name="goal" id="goal" placeholder="Enter Your Goal">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Needs: </label>
+                    <input type="text" name="needs" id="needs" placeholder="Enter your Basic Needs">
+                </div>
+                <div class="form-group">
+                    <label for="name">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter any additional detail if you want to"></textarea>        
+                </div>
+                <div class="form-group">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded center">
+                    Button
+                    </button>
+
+                </div>
+    </form>
+      </div>
+    </section>
+  </body>
+  </div>
+</html>
