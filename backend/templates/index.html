@@ -2,137 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link href="style.css" rel="stylesheet" /> -->
-    <style>
-        *,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-html,
-body {
-  padding: 0;
-  margin: 0;
-  background-color: #eee;
-  color: #fff;
-  font-family: sans-serif;
-}
-
-.slide {
-  text-decoration: none;
-  color: inherit;
-}
-.slide-btn {
-  display: none;
-}
-.carousel {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-.carousel h1 {
-  text-align: center;
-  margin: 0 auto;
-  line-height: 75vh;
-  font-size: 10vmin;
-}
-.slide {
-  float: left;
-  height: 100%;
-  width: 0;
-  transition: width 0.3s linear;
-  padding: 0;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.slide > * {
-  transition: transform 0.15s linear;
-  transform: scale(0);
-}
-.labels {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
-.labels label {
-  display: inline-block;
-  background-color: transparent;
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  margin: 0.5vmin 2vmin;
-  border: 3px solid white;
-}
-.carousel .one,
-.carousel .two,
-.carousel .three,
-.carousel .four,
-.carousel .five {
-  background-position: center center;
-  background-size: cover;
-}
-.carousel .one {
-  background-image: url(https://cdn.pixabay.com/photo/2016/10/14/19/21/canyon-1740973__340.jpg);
-}
-.carousel .two {
-  background-image: url(https://cdn.pixabay.com/photo/2018/05/30/00/24/thunderstorm-3440450__340.jpg);
-}
-.carousel .three {
-  background-image: url(https://cdn.pixabay.com/photo/2016/08/09/21/54/lake-1581879__340.jpg);
-}
-.carousel .four {
-  background-image: url(https://cdn.pixabay.com/photo/2021/09/20/21/32/lake-6641880__340.jpg);
-}
-.carousel .five {
-  background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg);
-}
-#slide-btn-1:checked ~ .one,
-#slide-btn-2:checked ~ .two,
-#slide-btn-3:checked ~ .three,
-#slide-btn-4:checked ~ .four,
-#slide-btn-5:checked ~ .five {
-  width: 100%;
-}
-#slide-btn-1:checked ~ .one > *,
-#slide-btn-2:checked ~ .two > *,
-#slide-btn-3:checked ~ .three > *,
-#slide-btn-4:checked ~ .four > *,
-#slide-btn-5:checked ~ .five > * {
-  transform: scale(1);
-}
-#slide-btn-1:checked ~ .labels label[for="slide-btn-1"],
-#slide-btn-2:checked ~ .labels label[for="slide-btn-2"],
-#slide-btn-3:checked ~ .labels label[for="slide-btn-3"],
-#slide-btn-4:checked ~ .labels label[for="slide-btn-4"],
-#slide-btn-5:checked ~ .labels label[for="slide-btn-5"] {
-  background-color: white;
-}
-.credit {
-  text-align: center;
-  color: #fff;
-  margin-top: 10px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
-
-.credit a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-}
-.form {
-  height: 150px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: blueviolet;
-  margin-left: 45%;
-}
-    </style>
+    <link href="../static/index.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Money Mentor</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -278,16 +148,38 @@ body {
         <label for="slide-btn-5"></label>
       </div>
     </div>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="../static/index.js"></script>
 
     <!-- Form -->
-    <div class="form">
-    <h1>Handle POST Request</h1>
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
     <form method="POST" action="http://127.0.0.1:5000">
-        <input type="text" name="username" placeholder="Username" />
-        <input type="password" name="password" placeholder="Password" />
-        <button type="submit">submit</button>
-      </form>
+       <div class="form-group">
+                    <label for="name">Salary: </label>
+                    <input type="text" name="salary" id="salary" placeholder="Enter Your Salary">
+                </div>
+                <div class="form-group">
+                    <label for="email">Goal: </label>
+                    <input type="text" name="goal" id="goal" placeholder="Enter Your Goal">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Needs: </label>
+                    <input type="text" name="needs" id="needs" placeholder="Enter your Basic Needs">
+                </div>
+                <div class="form-group">
+                    <label for="name">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter any additional detail if you want to"></textarea>        
+                </div>
+                <div class="form-group">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded center">
+                    Button
+                    </button>
+
+                </div>
+    </form>
+      </div>
+    </section>
   </body>
   </div>
 </html>

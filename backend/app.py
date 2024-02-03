@@ -1,4 +1,4 @@
-from flask import Flask, request , render_template
+from flask import Flask, request , render_template , jsonify
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
@@ -9,12 +9,12 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 @cross_origin()
 def home():
     if request.method == "GET":
-        return render_template("new.html")
+        return render_template("index.html")
     if request.method == 'POST':
+        mydict = {}
         for key in request.form:
-            print(key)
-        return {"username" : f"{request.form['username']}","password" :f"{request.form['password']}" }
-
+            mydict[key] = request.form[key]
+        return jsonify(mydict)
 
 if __name__ == "__main__":
     app.run(debug = True)
