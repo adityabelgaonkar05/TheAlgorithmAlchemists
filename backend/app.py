@@ -1,4 +1,4 @@
-from flask import Flask, request , render_template , jsonify
+from flask import Flask, request , render_template , jsonify,redirect
 import gemini
 
 app = Flask(__name__)
@@ -13,7 +13,7 @@ def home():
         prompt3 = request.form["needs"]
         prompt4 = request.form["message"]
 
-        return jsonify({"recommendations" : (gemini.gemini(prompt1,prompt2,prompt3,prompt4))})
+        return render_template("result.html" , data = gemini.gemini(prompt1,prompt2,prompt3,prompt4))
     else:
         return render_template("index.html")
     
