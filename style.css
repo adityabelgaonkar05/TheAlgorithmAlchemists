@@ -106,3 +106,34 @@ form {
   border: 2px solid #344e41;
   border-radius: 12px;
 }
+#loginbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #344e41;
+}
+#loginbtn:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.result-table {
+  background-color: #c6cfb5;
+}
+#prembtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #344e41;
+  border: 1px solid #344e41;
+}
+#prembtn:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #344e41;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
