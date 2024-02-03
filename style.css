@@ -9,7 +9,7 @@ form {
   justify-content: center;
   align-items: center;
   padding-bottom: 35px;
-  background: url("./form-background.jpg") no-repeat center center/cover;
+  /* background: url("./bg_img6.jpg") no-repeat center center/cover; */
   color: white;
 }
 
@@ -31,8 +31,8 @@ form {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.6;
-  background: url("./form-background.jpg") no-repeat center center/cover;
+  opacity: 0.9;
+  background: url("./bg_img6.jpg") no-repeat center center/cover;
 }
 
 #contact-box input,
@@ -42,4 +42,48 @@ form {
   border-radius: 12px;
   font-size: 1rem;
   color: black;
+}
+#navheader {
+  background-color: #344e41;
+  /* opacity: 0.8; */
+}
+.nava {
+  color: white;
+}
+#titlebar {
+  color: white;
+}
+#submitbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40%;
+  background-color: #344e41;
+}
+#submitbtn:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+#herobtn {
+  background-color: #344e41;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+}
+#herobtn:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.formheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  background: transparent;
+  color: white;
+  font-weight: 600;
 }
