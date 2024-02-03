@@ -14,8 +14,65 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script src="script.js"></script>
   </head>
   <body>
+    <!-- Navbar -->
+    <header class="text-gray-600 body-font">
+      <div
+        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+      >
+        <a
+          class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+          href="index.html"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+            ></path>
+          </svg>
+          <span class="ml-3 text-xl">Money Mentor</span>
+        </a>
+        <nav
+          class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
+        >
+          <a class="mr-5 hover:text-gray-900"></a>
+          <a class="mr-5 hover:text-gray-900"></a>
+          <a class="mr-5 hover:text-gray-900"></a>
+          <a class="mr-5 hover:text-gray-900"></a>
+        </nav>
+        <button
+          class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+        >
+          <a href="login.html"> Buy Premium </a>
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-4 h-4 ml-1"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <!-- Hero Section -->
     <section class="text-gray-600 body-font">
       <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-col text-center w-full mb-20">
@@ -92,15 +149,21 @@
             </tbody>
           </table>
         </div>
-        <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
-          <button
-            class="flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded"
-            id="prembtn"
-          >
-            <a href="login.html"> Buy Premium </a>
-          </button>
-        </div>
       </div>
     </section>
+    <!-- Graphs -->
+    <section>
+      <div class="parent">
+        <div id="piechart_3d" style="width: 900px; height: 500px"></div>
+      </div>
+    </section>
+    <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto result-btn-div">
+      <button
+        class="flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded"
+        id="prembtn"
+      >
+        <a href="login.html">Buy Premium </a>
+      </button>
+    </div>
   </body>
 </html>

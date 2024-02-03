@@ -1,19 +1,23 @@
-var int;
-function setInt() {
-  clearInterval(int);
-  int = setInterval(function () {
-    var btns = document.getElementsByName("carousel");
-    for (var i = 0; i < btns.length; i++) {
-      if (btns[i].checked) {
-        btns[i].checked = false;
-        if (i + 1 == btns.length) {
-          btns[0].checked = true;
-        } else {
-          btns[i + 1].checked = true;
-        }
-        return;
-      }
-    }
-  }, 5000);
+google.charts.load("current", { packages: ["corechart"] });
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+    ["Task", "Hours per Day"],
+    ["Pay EMI for car", 1200],
+    ["Pay for children school fees", 4000],
+    ["Add 10% of salary for savings", 5000],
+    ["Set aside money for groceries and other household expenses", 15000],
+    ["Allocate money for entertainment and personal expenses", 5000],
+    ["Allocate money for unexpected expenses", 3000],
+  ]);
+
+  var options = {
+    title: "My Daily Activities",
+    is3D: true,
+  };
+
+  var chart = new google.visualization.PieChart(
+    document.getElementById("piechart_3d")
+  );
+  chart.draw(data, options);
 }
-setInt();

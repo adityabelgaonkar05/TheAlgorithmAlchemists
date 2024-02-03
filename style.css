@@ -127,6 +127,7 @@ form {
   align-items: center;
   background-color: #344e41;
   border: 1px solid #344e41;
+  margin-bottom: 50px;
 }
 #prembtn:hover {
   display: flex;
@@ -136,4 +137,13 @@ form {
   color: #344e41;
   transform: scale(1.1);
   transition: 0.5s;
+}
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+rect {
+  fill: none;
+  margin: none;
 }
