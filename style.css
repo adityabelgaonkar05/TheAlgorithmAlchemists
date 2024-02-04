@@ -24,7 +24,7 @@ form {
 
 #contact-box label {
   font-size: 1.2rem;
-  font-family: "Baloo 2", cursive;
+  font-family: "Baloo 2", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #contact {
   position: relative;
@@ -43,9 +43,9 @@ form {
 #contact-box input,
 #contact-box textarea {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.9rem;
   border-radius: 12px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: black;
 }
 #navheader {
@@ -58,14 +58,20 @@ form {
 #titlebar {
   color: white;
 }
-.submitbtn {
+#submitbtn {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 40%;
-  background-color: #344e41;
+  margin-left: 88%;
+  padding: 0.8rem;
+  border-radius: 7px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  /* background-color: #344e41; */
+  background-color: #409f3e;
 }
-.submitbtn:hover {
+#submitbtn:hover {
   background-color: white;
   color: black;
   transform: scale(1.1);

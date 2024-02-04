@@ -13,10 +13,18 @@ def home():
         prompt3 = request.form["needs"]
         prompt4 = request.form["message"]
 
-        return render_template("result.html" , data = gemini.gemini(prompt1,prompt2,prompt3,prompt4))
+        # return jsonify({"recommendations" : (gemini.gemini(prompt1,prompt2,prompt3,prompt4))})
+        mylist = []
+        for items in gemini.gemini(prompt1,prompt2,prompt3,prompt4):
+            mylist.append([items["action"],items["amount"]])
+        graph_data = {"params" : mylist}
+        return render_template("result.html" , data = gemini.gemini(prompt1,prompt2,prompt3,prompt4) , salary = request.form["salary"] , graph_data = graph_data)
     else:
         return render_template("index.html")
-    
+
+@app.route("/premium")
+def premium():
+    return render_template("login.html")
 
 if __name__ == "__main__":
     app.run(debug = True)
