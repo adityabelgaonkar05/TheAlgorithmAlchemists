@@ -27,4 +27,4 @@ def premium():
     return render_template("login.html")
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(debug = False, host = '0.0.0.0')
