@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href="style.css" rel="stylesheet" />
+    <link href="premium.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Money Mentor</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,51 +14,71 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <form method="POST" action="{{ url_for('handle_post') }}">
-      <div class="form-group">
-        <label for="name">Salary: </label><br />
-        <input
-          type="text"
-          name="salary"
-          id="salary"
-          placeholder="Enter Your Salary"
-        />
+    <!-- Form -->
+    <section id="contact">
+      <div id="contact-box">
+        <form action="">
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input
+              type="text"
+              name="age"
+              id="age"
+              placeholder="Enter Your Age"
+            />
+          </div>
+          <div class="form-group">
+            <label for="location">Location </label>
+            <input
+              type="text"
+              name="location"
+              id="location"
+              placeholder="Enter Your Location"
+            />
+          </div>
+          <div class="form-group">
+            <label for="family">Family Members </label>
+            <input
+              type="text"
+              name="family"
+              id="family"
+              placeholder="Enter the number of family members"
+            />
+          </div>
+          <div class="form-group">
+            <label for="investment">Investment </label>
+            <input
+              type="text"
+              name="investment"
+              id="investment"
+              placeholder="Do you have any investments? (Yes/No). If yes, please specify."
+            />
+          </div>
+          <div class="form-group">
+            <label for="debt">Debts </label>
+            <input
+              type="text"
+              name="debt"
+              id="debt"
+              placeholder="Do you have any debts? (Yes/No). If yes, please specify."
+            />
+          </div>
+          <div class="form-group">
+            <button class="text-white font-bold py-2 px-4 rounded submitbtn">
+              <a href=""></a>
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="email">Goal: </label><br />
-        <input
-          type="text"
-          name="goal"
-          id="goal"
-          placeholder="Enter Your Goal"
-        />
-      </div>
-      <div class="form-group">
-        <label for="phone">Needs: </label><br />
-        <input
-          type="text"
-          name="needs"
-          id="needs"
-          placeholder="Enter your Basic Needs"
-        />
-      </div>
-      <div class="form-group">
-        <label for="name">Message: </label><br />
-        <textarea
-          name="message"
-          id="message"
-          cols="20"
-          rows="10"
-          placeholder="Enter any additional detail if you want to"
-        ></textarea>
-      </div>
-      <div class="form-group">
-        <button class="text-white font-bold py-2 px-4 rounded submitbtn">
-          Submit
-        </button>
-      </div>
-    </form>
-    
+    </section>
+  </body>
 </html>

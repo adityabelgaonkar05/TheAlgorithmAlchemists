@@ -6,14 +6,16 @@ body {
 }
 form {
   width: 50%;
+  height: 100vh;
 }
 #contact-box {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 35px;
-  /* background: url("./bg_img6.jpg") no-repeat center center/cover; */
+
   color: white;
+  background-color: #023e8a;
 }
 
 #contact-box form {
@@ -146,4 +148,50 @@ form {
 rect {
   fill: none;
   margin: none;
+}
+#prem-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px;
+  margin: 25px;
+  width: 80%;
+}
+
+#contact-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 35px;
+}
+
+#contact-box form {
+  width: 50%;
+}
+
+#contact-box label {
+  font-size: 1.2rem;
+  font-family: "Baloo 2", cursive;
+}
+#contact {
+  position: relative;
+}
+
+#contact::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+  background-color: #344e41;
+}
+
+#contact-box input,
+#contact-box textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
 }
