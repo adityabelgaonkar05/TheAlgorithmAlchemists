@@ -22,9 +22,9 @@ def home():
     else:
         return render_template("index.html")
 
-@app.route("/premium")
-def premium():
-    return render_template("login.html")
+# @app.route("/taxation")
+# def premium():
+#     return render_template("taxation.html")
 
 @app.route("/taxation", methods=["POST","GET"])
 def taxation():
@@ -35,4 +35,4 @@ def taxation():
         return jsonify({"FIN" : value})
 
 if __name__ == "__main__":
-    app.run(debug = False, host = '0.0.0.0')
+    app.run(debug = True, host = '0.0.0.0')
