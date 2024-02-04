@@ -4,6 +4,7 @@ model = genai.GenerativeModel('gemini-pro')
 GOOGLE_API_KEY='AIzaSyCDW52posgyQZVxtjkVz9SoGkRDmD9P_oo'
 genai.configure(api_key=GOOGLE_API_KEY)
 
+
 def gemini(prompt1,prompt2,prompt3,prompt4):
     format = [
             {
@@ -43,3 +44,27 @@ def gemini(prompt1,prompt2,prompt3,prompt4):
         except:
             continue
     return solution
+
+def Taxation():
+    while True:
+        try:
+            tax_format = [
+                '1 . Your answers Here as a list members To add anything else except proper english words and give me around 8 list members',
+            ]
+            taxation_prompt = f"""I live in Bangalore city
+            have 4 family members
+            30,000 rupees in investments in stocks
+            mortgage on house worth 40000 monthly
+            based on ths information plus the fact that 
+            my salary is 120000 per month, i need diabetic medicine every month, my goal is to pay off my mortgage, and note of the fact that i live alone, please tell me how i can try to save on my taxes
+            dont include any written paragraph reply everthing as a string inside a python list dont include anything else except words inside the string Heres a format to help you please reply in the following prompt only : {tax_format} """
+            taxation_response =  model.generate_content(taxation_prompt)
+            Taxsolution = (taxation_response.text)
+            Taxsolution = eval(Taxsolution)
+            break
+        except:
+            continue
+    return Taxsolution
+
+# if __name__ == "__main__":
+#     Taxation()

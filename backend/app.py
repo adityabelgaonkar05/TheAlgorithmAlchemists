@@ -26,5 +26,13 @@ def home():
 def premium():
     return render_template("login.html")
 
+@app.route("/taxation", methods=["POST","GET"])
+def taxation():
+    if request.method == "GET":
+        return render_template("taxation.html")
+    if request.method=="POST":
+        value = gemini.Taxation
+        return jsonify({"FIN" : value})
+
 if __name__ == "__main__":
     app.run(debug = False, host = '0.0.0.0')

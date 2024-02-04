@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Financial Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="text-gray-600 body-font">
+      <div
+        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+      >
+        <a
+          class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+          href="index.html"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+            ></path>
+          </svg>
+          <span class="ml-3 text-xl">Money Mentor</span>
+        </a>
+        <nav
+          class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
+        >
+          <a class="mr-5 hover:text-gray-900"></a>
+          <a class="mr-5 hover:text-gray-900"></a>
+          <a class="mr-5 hover:text-gray-900"></a>
+          <a class="mr-5 hover:text-gray-900"></a>
+        </nav>
+        <button
+          class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+        >
+          <a href="login.html"> Buy Premium </a>
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-4 h-4 ml-1"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+          <h1
+            class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900"
+          >
+            Financial Report
+          </h1>
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+            Craft your unique financial future. Money Mentro offers personalized
+            financial planning tailored to your income, needs, and goals. Ditch
+            the one-size-fits-all approach and take control of your finances.
+            Start your journey today!
+          </p>
+        </div>
+        <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+          <table
+            class="table-auto w-full text-left whitespace-no-wrap result-table"
+          >
+            <thead>
+              <tr>
+                <th
+                  class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl"
+                >
+                  Action
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="px-4 py-3">Pay EMI for car</td>
+              </tr>
+              <tr>
+                <td class="border-t-2 border-gray-200 px-4 py-3">
+                  Pay for children school fees
+                </td>
+              </tr>
+              <tr>
+                <td class="border-t-2 border-gray-200 px-4 py-3">
+                  Add 10% of salary for savings
+                </td>
+              </tr>
+              <tr>
+                <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">
+                  Set aside money for groceries and other household expenses
+                </td>
+              </tr>
+              <tr>
+                <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">
+                  Allocate money for entertainment and personal expenses
+                </td>
+              </tr>
+              <tr>
+                <td class="border-t-2 border-b-2 border-gray-200 px-4 py-3">
+                  Allocate money for unexpected expenses
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- Graphs -->
+    <section>
+      <div class="parent">
+        <div id="piechart_3d" style="width: 900px; height: 500px"></div>
+      </div>
+    </section>
+    <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto result-btn-div">
+      <button
+        class="flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded"
+        id="prembtn"
+      >
+        <a href="login.html">Buy Premium </a>
+      </button>
+    </div>
+  </body>
+</html>
